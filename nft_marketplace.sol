@@ -3,7 +3,7 @@ pragma solidity ^0.5.0;
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC721/ERC721Full.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/ownership/Ownable.sol";
 
-contract MarketToken is ERC721Full {
+contract TokenFactory is ERC721Full {
     using Counters for Counters.Counter;
     Counters.Counter private token_ids;
     address owner;
@@ -24,13 +24,13 @@ contract MarketToken is ERC721Full {
 }
 
 contract SellToken {
-    MarketToken token;
+    TokenFactory token;
     address payable public owner;
     uint public price;
     string public uri;
     uint item_id;
 
-    constructor (MarketToken _token, string memory _uri, uint _price) public {
+    constructor (TokenFactory _token, string memory _uri, uint _price) public {
         
         owner = msg.sender;
         token = _token;
