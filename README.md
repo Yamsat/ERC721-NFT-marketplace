@@ -42,11 +42,11 @@ When deploying it a buyer inputs the address of SellToken contract for this part
 6. Transfer the proceeds from the sale to your address.
 
 ## Security considerations
-More than two people may place an order for the same token. In this case whoever pays first will get the token (not the one who placed the order first). 
-Once the payment is received by the SellToken, the contract prevents the seller from receiving any more payment whether it's from the same buyer or a different buyer.
-Once the payment is received by the SellToken, it will not accept an order for the same token.
-Seller cannot transfer the token to the buyer before the payment is recieved.
-Seller cannot transfer the proceeds from the sale to his/her address before transferring the token to the buyer.
+- More than two people may place an order for the same token. In this case whoever pays first will get the token (not the one who placed the order first). 
+- Once the payment is received by the SellToken, the contract prevents the seller from receiving any more payment whether it's from the same buyer or a different buyer.
+- Once the payment is received by the SellToken, it will not accept an order for the same token.
+- Seller cannot transfer the token to the buyer before the payment is recieved.
+- Seller cannot transfer the proceeds from the sale to his/her address before transferring the token to the buyer.
 
 
 
