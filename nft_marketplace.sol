@@ -89,6 +89,7 @@ contract BuyToken {
     constructor (SellToken _sell, string memory blank) public {
         customer = msg.sender;
         sell = _sell;
+        require(sell.sold() == false);
         price = sell.price();
         seller = sell.owner();
     }
