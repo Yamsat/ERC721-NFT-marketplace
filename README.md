@@ -5,18 +5,18 @@ NOTE: The code is not audited. Hence there may be bugs that compromise security.
 
 The project consists of three contracts;
 
--TokenFactory
--SellToken
--BuyToken
+- TokenFactory
+- SellToken
+- BuyToken
 
-## TokenFactory contract
+### TokenFactory contract
 You can construct NFT with this contract powered by OpenZeppelin ERC721 library. You may not need to directly access the contract once deployed.
 This contract will normally be accessed from SellToken contract.
 
 Wheny deplying it, you give a name and ticker to your own NFT tokens.  Basically all tokens will be minted under this name and this ticker.
 Each token will be indetified by ID (=number).  
 
-## SellToken contract
+### SellToken contract
 This contract is deployed everytime a new token is created and sold. Hence the life of the contract ends when the token is sold.
 
 Three parameters below are required when a contract is deployed.
@@ -29,11 +29,11 @@ The contract has following functions;
 - transferring a token to a buyer
 - transferring proceeds from a sale to an seller
 
-## BuyToken contract
+### BuyToken contract
 To order a particular token a buyer deploys this contract. It is deployed for each token. Hence the life of the contract ends when the token is sold.
 When deploying it a buyer inputs the address of SellToken contract for this particular token. The contract has only one function, 'pay.' 
 
-# Steps
+## Steps
 1. Deploy TokenFactory entering token name and ticker as parameters.
 2. Deploy SellToken entering the address of TokenFactory deployed in Step 1, token URI and price.
 3. Buyer deploys BuyToken entering the address of SellToken for a particular token.
