@@ -13,7 +13,7 @@ The project consists of three contracts;
 You can construct NFT with this contract powered by OpenZeppelin ERC721 library. You may not need to directly access the contract once deployed.
 This contract will normally be accessed from SellToken contract.
 
-Wheny deplying it, you give a name and ticker to your own NFT tokens.  Basically all tokens will be minted under this name and this ticker.
+When deplying it, you give a name and ticker to your own NFT tokens.  Basically all tokens will be minted under this name and this ticker.
 Each token will be indetified by ID (=number).  
 
 ### SellToken contract
