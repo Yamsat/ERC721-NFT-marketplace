@@ -1,5 +1,5 @@
 # ERC721-NFT-marketplace
-Do you wish to run your own NFT market place.  This may be a solution.
+Do you wish to run your own NFT market place?  This may be a solution.
 
 NOTE: The code is not audited. Hence there may be bugs that compromise security. Please use it at your own risk. 
 
